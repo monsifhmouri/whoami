@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Monsif Hmouri · MONSTR M1ND</title>
-  <!-- Font Awesome 6 (free) for official logos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -24,7 +23,6 @@
       cursor: default;
     }
 
-    /* dark smoky glass background */
     .glow-wrapper {
       position: relative;
       width: 100%;
@@ -33,7 +31,6 @@
       z-index: 1;
     }
 
-    /* particle canvas – behind content but interactive */
     #particleCanvas {
       position: fixed;
       top: 0;
@@ -41,21 +38,19 @@
       width: 100%;
       height: 100%;
       display: block;
-      pointer-events: none;  /* let mouse events pass through to clickable items */
+      pointer-events: none;  
       z-index: 2;
     }
 
-    /* main content layer above canvas */
     .content {
       position: relative;
       z-index: 10;
       max-width: 1200px;
       margin: 0 auto;
       padding: 2.5rem 2rem;
-      pointer-events: auto;   /* we can click links/buttons */
+      pointer-events: auto;   
     }
 
-    /* profile section */
     .profile-pic {
       width: 150px;
       height: 150px;
@@ -64,7 +59,7 @@
       border: 3px solid rgba(220, 230, 255, 0.25);
       box-shadow: 0 20px 40px -12px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,70,70,0.2) inset;
       transition: transform 0.2s ease;
-      background: #1e2128; /* fallback */
+      background: #1e2128; 
     }
     .profile-pic:hover {
       transform: scale(1.02);
@@ -105,7 +100,6 @@
       border-radius: 0 30px 30px 0;
     }
 
-    /* description cards */
     .mindset-grid {
       display: flex;
       flex-wrap: wrap;
@@ -153,7 +147,6 @@
       font-size: 1.05rem;
     }
 
-    /* identity highlight */
     .monstr-section {
       background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(12px);
@@ -173,7 +166,6 @@
       filter: drop-shadow(0 0 12px #ff5e00);
     }
 
-    /* contact / social row — all one‑click buttons with original colors */
     .social-row {
       display: flex;
       flex-wrap: wrap;
@@ -202,12 +194,11 @@
     .social-btn i {
       font-size: 1.9rem;
     }
-    /* brand colors + official logo */
     .social-btn.github { background: #171515; border-left: 4px solid #fff; }
     .social-btn.github i { color: #fff; }
 
     .social-btn.bugcrowd { background: #1e2b3a; border-left: 4px solid #f7b731; }
-    .social-btn.bugcrowd i { color: #f7b731; } /* fallback, we use specific logo */
+    .social-btn.bugcrowd i { color: #f7b731; } 
 
     .social-btn.linkedin { background: #0077b5; }
     .social-btn.linkedin i { color: white; }
@@ -231,7 +222,6 @@
       box-shadow: 0 0 25px currentColor;
     }
 
-    /* email chip */
     .email-chip {
       background: #0f1420;
       border-radius: 40px;
@@ -256,7 +246,6 @@
       font-size: 1rem;
     }
 
-    /* make mouse particles pop more */
     .signature {
       text-align: right;
       opacity: 0.5;
@@ -267,7 +256,6 @@
   <canvas id="particleCanvas"></canvas>
   <div class="glow-wrapper">
     <div class="content">
-      <!-- profile image my.jpg -->
       <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
         <img src="my.jpg" alt="Monsif Hmouri profile" class="profile-pic" onerror="this.src='https://via.placeholder.com/150/1e1e30/cccccc?text=MY.PNG'">
         <div>
@@ -276,7 +264,6 @@
         </div>
       </div>
 
-      <!-- raw description exactly as provided (human written style, no bullet points) -->
       <div class="philosophy">
         I move through the digital world under different mindsets — sometimes black hat, sometimes gray hat, and sometimes white hat. It depends on the situation, the challenge, and the path I choose at that moment.<br><br>
         I’m deeply involved in the world of cybersecurity, hacking, and the hidden side of the internet. My curiosity pushes me to explore systems, networks, and technologies without limits. I constantly study, experiment, and push my knowledge further into the unknown parts of the web.<br><br>
@@ -286,7 +273,6 @@
         It’s not just a name. It’s the mindset I enter when I’m exploring systems, solving complex problems, and navigating the deeper layers of the cyber world.
       </div>
 
-      <!-- three hats as visual cards (no bullets, just nice) -->
       <div class="mindset-grid">
         <div class="mind-card">
           <h3 class="black-hat"><span>⬛</span> black hat</h3>
@@ -302,13 +288,11 @@
         </div>
       </div>
 
-      <!-- monstr identity block -->
       <div class="monstr-section">
         <span class="monstr-name">MONSTR M1ND</span>
         <p style="font-size:1.4rem; margin-top: 1rem; color: #d1dbf5;">the analytical mindset — exploring systems, solving complex problems, and navigating the deeper layers of the cyber world.</p>
       </div>
 
-      <!-- social buttons: each one-click with official logo & colors, exactly as requested -->
       <div class="social-row">
         <a href="https://github.com/monsifhmouri" target="_blank" class="social-btn github"><i class="fab fa-github"></i> GitHub</a>
         <a href="https://bugcrowd.com/h/MONSTR-M1ND" target="_blank" class="social-btn bugcrowd"><i class="fas fa-bug"></i> Bugcrowd</a>
@@ -316,36 +300,30 @@
         <a href="https://www.instagram.com/httpx.mrmonsif/" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
         <a href="https://www.facebook.com/https.monsifhmouri" target="_blank" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
         <a href="https://www.youtube.com/@monsifhmouri" target="_blank" class="social-btn youtube"><i class="fab fa-youtube"></i> YouTube</a>
-        <!-- email button also with one click - but we want to show the email address as well? but instruction: each with one click, so mailto link -->
         <a href="mailto:monstr-m1nd@bugcrowdninja.com" class="social-btn email"><i class="fas fa-envelope"></i> Mail</a>
       </div>
-
-      <!-- explicit email chip for visibility, but still one-click (the envelope already does) but you wanted to show the email address also in text? I'll keep a clean chip -->
       <div class="email-chip">
         <i class="fas fa-envelope-open-text"></i> monstr-m1nd@bugcrowdninja.com
       </div>
 
-      <!-- subtle divider -->
       <hr>
 
       <div class="footer-note">
         <p>Monsif Hmouri · MONSTR M1ND · operating without boundaries</p>
         <p class="signature"># knowledge has no boundaries</p>
       </div>
-    </div> <!-- end content -->
-  </div> <!-- end glow-wrapper -->
-
+    </div> 
+  </div> 
   <script>
     (function() {
-      // === particle system: colorful explosions following mouse, pop on click ===
       const canvas = document.getElementById('particleCanvas');
       const ctx = canvas.getContext('2d');
       let width, height;
 
       let particles = [];
       const MAX_PARTICLES = 400;
-      const CLICK_PARTICLES = 30;    // number of particles on click
-      const TRAIL_PARTICLES = 4;      // particles per mousemove frame (throttled)
+      const CLICK_PARTICLES = 30;    
+      const TRAIL_PARTICLES = 4;      
 
       let mouseX = 0, mouseY = 0;
       let mouseMoved = false;
@@ -359,23 +337,22 @@
       window.addEventListener('resize', resizeCanvas);
       resizeCanvas();
 
-      // simple particle structure
       class Particle {
         constructor(x, y, color) {
           this.x = x;
           this.y = y;
-          this.vx = (Math.random() - 0.5) * 14;  // faster pop
-          this.vy = (Math.random() - 0.5) * 14 - 2; // slight upward drift
-          this.size = Math.random() * 8 + 4;     // 4-12px
+          this.vx = (Math.random() - 0.5) * 14;  
+          this.vy = (Math.random() - 0.5) * 14 - 2; 
+          this.size = Math.random() * 8 + 4;     /
           this.color = color;
-          this.life = 1.0;          // full opacity
-          this.decay = 0.012 + Math.random() * 0.02; // fade speed
+          this.life = 1.0;          
+          this.decay = 0.012 + Math.random() * 0.02; 
         }
 
         update() {
           this.x += this.vx;
           this.y += this.vy;
-          this.vy += 0.12;   // slight gravity
+          this.vy += 0.12;   
           this.vx *= 0.98;
           this.vy *= 0.98;
           this.life -= this.decay;
@@ -388,7 +365,6 @@
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.size * (0.5 + this.life * 0.5), 0, Math.PI * 2);
           ctx.fill();
-          // add bright white core sometimes
           if (this.life > 0.8) {
             ctx.globalAlpha = this.life * 0.5;
             ctx.fillStyle = '#fff9';
@@ -399,26 +375,22 @@
         }
     }
 
-      // generate random bright color: red, green, yellow, orange, magenta, cyan
       function randomPopColor() {
-        const hues = [0, 40, 60, 120, 280, 320, 200]; // red, orange, yellow, green, purple, pink, cyan
+        const hues = [0, 40, 60, 120, 280, 320, 200]; 
         const hue = hues[Math.floor(Math.random() * hues.length)];
-        return `hsl(${hue}, 95%, 70%)`; // very bright
+        return `hsl(${hue}, 95%, 70%)`; 
       }
 
-      // add particles at (x,y)
       function addBurst(px, py, count) {
         for (let i = 0; i < count; i++) {
-          if (particles.length > MAX_PARTICLES * 1.5) break; // safety
+          if (particles.length > MAX_PARTICLES * 1.5) break; 
           particles.push(new Particle(px, py, randomPopColor()));
         }
-        // trim if needed
         if (particles.length > MAX_PARTICLES) {
           particles = particles.slice(-MAX_PARTICLES);
         }
       }
 
-      // mouse move listener (throttle via requestAnimationFrame)
       let moveThrottle = false;
       window.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
@@ -434,12 +406,10 @@
         }
       });
 
-      // click -> big explosion
       window.addEventListener('click', (e) => {
         const cx = e.clientX;
         const cy = e.clientY;
         addBurst(cx, cy, CLICK_PARTICLES);
-        // second wave after tiny delay for layered explosion
         setTimeout(() => {
           addBurst(cx, cy, CLICK_PARTICLES/2);
         }, 30);
@@ -448,10 +418,8 @@
         }, 70);
       });
 
-      // animation loop
       function animate() {
         ctx.clearRect(0, 0, width, height);
-        // update and draw particles
         for (let i = particles.length - 1; i >= 0; i--) {
           const p = particles[i];
           if (!p.update()) {
@@ -464,7 +432,6 @@
       }
       animate();
 
-      // add some random floating particles at start for atmosphere
       for (let i=0; i<30; i++) {
         setTimeout(() => {
           addBurst(Math.random()*width, Math.random()*height, 1);
@@ -472,8 +439,6 @@
       }
     })();
   </script>
-
-  <!-- ensure font inter optional but system fallback ok -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </body>
 </html>
